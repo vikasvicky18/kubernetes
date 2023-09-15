@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-externalname-service
+  namespace: dev
+spec:
+  type: ExternalName
+  externalName: some.external.service.com  # Replace with the actual DNS name
+  ports:
+    - protocol: TCP
+      port: 80
+
